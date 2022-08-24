@@ -91,5 +91,7 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
+        env:
+          NODE_ENV: 'production'
         id: deployment
         uses: actions/deploy-pages@v1
